@@ -1,0 +1,28 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "zsh",
+                "terminal.integrated.profiles.linux": {
+                    "zsh": {
+                        "path": "/bin/zsh"
+                    }
+                }
+            },
+            "extensions": [
+                "dtsvet.vscode-wasm",
+                "ms-python.python",
+                "ms-python.black-formatter",
+                "charliermarsh.ruff",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "onCreateCommand": [
+        "zsh",
+        "./.startup.sh"
+    ]
+}
