@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pre-commit/action@v3.0.1
       - run: mkdir -p dist
       - run: tar czvf ./dist/cc-devcontainer.tar.gz .devcontainer .startup.sh
       - run: zip -r dist/cc-devcontainer.zip .devcontainer .startup.sh
