@@ -23,6 +23,6 @@
     },
     "onCreateCommand": [
         "zsh",
-        "./.startup.sh"
+        "./.install.sh"
     ]
 }

@@ -1,4 +1,4 @@
-# Compiler Construction Lecture - Development Environment
+# Compiler Construction Lecture - Development Container
 
 ## Setup
 
@@ -22,4 +22,10 @@
    └── .startup.sh
    ```
 7. Open the project folder in Visual Studio Code
-8. Click on the green button in the bottom left corner of the window and select "Reopen in Container"
+8. If you are prompted to reopen the folder in a container, click on "Reopen in Container". You can also click on the button in the bottom left corner of the window and select "Reopen in Container"
+
+## Customization
+
+The file `.install.sh` is executed when the container is built. You can modify this file to install additional tools or libraries.
+
+Currently, this script configure the theme for [oh-my-zsh](https://ohmyz.sh/) and patches the `~/.zshrc` file to source the `.zshrc` file from the project folder.
