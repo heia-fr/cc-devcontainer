@@ -19,11 +19,13 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 # Install Ruff
 RUN $HOME/.local/bin/uv tool install ruff@latest
 
-# Install Wasmtime
+# Install various tools
+RUN $HOME/.local/bin/uv tool install pre-commit@latest
+RUN $HOME/.local/bin/uv tool install pyright@latest
+RUN $HOME/.local/bin/uv tool install mypy@latest
+RUN $HOME/.local/bin/uv tool install black@latest
+
+# Install Wasm Runtimes
 RUN curl -sSfL https://wasmtime.dev/install.sh  | bash
-
-# Install Wasmer
 RUN curl https://get.wasmer.io -sSfL | sh
-
-# Install WasmEdge
 RUN curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/install.sh | bash
