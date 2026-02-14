@@ -16,6 +16,7 @@
                 "dtsvet.vscode-wasm",
                 "ms-python.python",
                 "ms-python.black-formatter",
+                "the0807.uv-toolkit",
                 "charliermarsh.ruff",
                 "ms-azuretools.vscode-docker"
             ]
