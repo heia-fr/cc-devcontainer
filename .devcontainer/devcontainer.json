@@ -1,29 +1,20 @@
+// More info: https://containers.dev/implementors/json_reference/
 {
-    "build": {
-        "dockerfile": "Dockerfile"
+    "name": "CC Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     },
     "customizations": {
         "vscode": {
-            "settings": {
-                "terminal.integrated.defaultProfile.linux": "zsh",
-                "terminal.integrated.profiles.linux": {
-                    "zsh": {
-                        "path": "/bin/zsh"
-                    }
-                }
-            },
             "extensions": [
-                "dtsvet.vscode-wasm",
-                "ms-python.python",
-                "ms-python.black-formatter",
-                "the0807.uv-toolkit",
-                "charliermarsh.ruff",
-                "ms-azuretools.vscode-docker"
+                "mads-hartmann.bash-ide-vscode",
+                "dbaeumer.vscode-eslint"
             ]
         }
     },
-    "onCreateCommand": [
+    "postCreateCommand": [
         "zsh",
-        "./.install.sh"
+        ".devcontainer/setup.sh"
     ]
 }

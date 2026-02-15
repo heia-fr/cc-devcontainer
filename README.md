@@ -1,31 +1,38 @@
-# Compiler Construction Lecture - Development Container
+# Compiler Construction -  Container Templates
 
-## Setup
+<table style="width: 100%; border-style: none;"><tr>
+<td style="width: 140px; text-align: center;"><a href="https://github.com/devcontainers"><img width="128px" src="https://raw.githubusercontent.com/microsoft/fluentui-system-icons/78c9587b995299d5bfc007a0077773556ecb0994/assets/Cube/SVG/ic_fluent_cube_32_filled.svg" alt="devcontainers organization logo"/></a></td>
+<td>
+<strong>Compiler Construction -  Container Templates</strong><br />
+A Container Template for the Compiler Construction course at the HEIA-FR.
+</td>
+</tr></table>
 
-1. Install [Docker](https://docs.docker.com/get-docker/)
-2. Install [Visual Studio Code](https://code.visualstudio.com/)
-3. Install the [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension for Visual Studio Code
-4. Create a new folder for your project
-5. Download the [cc-devcontainer.tar.gz](https://github.com/heia-fr/cc-devcontainer/releases/latest/download/cc-devcontainer.tar.gz) or [cc-devcontainer.zip](https://github.com/heia-fr/cc-devcontainer/releases/latest/download/cc-devcontainer.zip) file and extract it into the folder
-   On Unix based systems, you can use the following commands:
+## How can I use the Templates?
 
-   ```bash
-   curl -sSfLo - https://github.com/heia-fr/cc-devcontainer/releases/latest/download/cc-devcontainer.tar.gz | tar xvf -
-   ```
-6. Check that you have the following files in your project folder:
+**Using the Dev Container CLI**
 
-   ```
-   .
-   ├── .devcontainer
-   │   ├── Dockerfile
-   │   └── devcontainer.json
-   └── .startup.sh
-   ```
-7. Open the project folder in Visual Studio Code
-8. If you are prompted to reopen the folder in a container, click on "Reopen in Container". You can also click on the button in the bottom left corner of the window and select "Reopen in Container"
+The [@devcontainers/cli](https://containers.dev/supporting#devcontainer-cli) offers a `devcontainer templates apply` command to apply a Template hosted in the supported OCI registry.
 
-## Customization
 
-The file `.install.sh` is executed when the container is built. You can modify this file to install additional tools or libraries.
+#### Example
 
-Currently, this script configure the theme for [oh-my-zsh](https://ohmyz.sh/) and patches the `~/.zshrc` file to source the `.zshrc` file from the project folder.
+```
+devcontainer templates apply --workspace-folder . \
+    --template-id ghcr.io/heia-fr/cc-devcontainer/coco:latest
+```
+
+## Contributions
+
+### Contributing to this repository
+
+This repository will accept improvement and bug fix contributions related to the
+[current set of maintained templates](./src).
+
+## Feedback
+
+Issues related to these templates can be reported in [an issue](https://github.com/devcontainers/templates/issues) in this repository.
+
+# License
+Copyright (c) Microsoft Corporation. All rights reserved. <br />
+Licensed under the MIT License. See [LICENSE](LICENSE).

@@ -1,0 +1,11 @@
+{
+    "id": "coco",
+    "version": "0.1.0",
+    "name": "Compiler Construction",
+    "description": "A Template for the Compiler Construction course at the HEIA-FR",
+    "documentationURL": "https://github.com/heia-fr/cc-devcontainer/tree/main/src/coco",
+    "licenseURL": "https://github.com/heia-fr/cc-devcontainer/blob/main/LICENSE",
+    "platforms": [
+        "Any"
+    ]
+}
