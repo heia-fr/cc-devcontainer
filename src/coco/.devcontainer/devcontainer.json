@@ -25,6 +25,6 @@
     },
     "onCreateCommand": [
         "zsh",
-        "./.install.sh"
+        ".devcontainer/setup.sh"
     ]
 }
